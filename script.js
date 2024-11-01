@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     submitButton.addEventListener("click", () => {
         const registrationData = {
-            playerTelegram_id: parseInt(document.getElementById("playerTelegram_id").value),
+            playerTelegram_id: document.getElementById("playerTelegram_id").value,
             playerGame_id: document.getElementById("playerGame_id").value,
             playerNick_name: document.getElementById("playerNick_name").value,
             web_app_type: "reg"
