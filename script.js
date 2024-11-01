@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const registrationData = {
             playerTelegram_id: parseInt(document.getElementById("playerTelegram_id").value),
             playerGame_id: document.getElementById("playerGame_id").value,
-            playerNick_name: document.getElementById("playerNick_name").value
+            playerNick_name: document.getElementById("playerNick_name").value,
+            web_app_type: "reg"
         };
 
         // Отправка данных боту
