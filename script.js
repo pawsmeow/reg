@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("registration-form");
+    const form = document.getElementById("tournament-form");
     const submitButton = document.getElementById("submit-button");
 
     // Telegram Web App API
@@ -7,15 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
     tg.expand(); // Расширить приложение на весь экран
 
     submitButton.addEventListener("click", () => {
-        const registrationData = {
-            playerTelegram_id: document.getElementById("playerTelegram_id").value,
-            playerGame_id: document.getElementById("playerGame_id").value,
-            playerNick_name: document.getElementById("playerNick_name").value,
-            web_app_type: "reg"
+        const tournamentData = {
+            gameid: document.getElementById("tournament_creator").value,
+            nickname: document.getElementById("tournament_name").value,
+            username: document.getElementById("tournament_about").value,
+            web_app_type: "update"
         };
 
         // Отправка данных боту
-        tg.sendData(JSON.stringify(registrationData)); // Отправляем данные WebAppData
+        tg.sendData(JSON.stringify(tournamentData)); // Отправляем данные WebAppData
         tg.close(); // Закрыть Web App после отправки
     });
 });
