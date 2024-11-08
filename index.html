@@ -3,78 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация на турнир</title>
+    <title>Изменение данных</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 90%;
-            max-width: 400px; /* Ограничиваем ширину */
-            margin: 50px auto; /* Отступ сверху и центрирование */
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-        }
-        label {
-            display: block;
-            margin-top: 15px;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            margin-top: 20px;
-            padding: 10px;
-            width: 100%;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Регистрация на турнир</h1>
-        <form id="registration-form">
-            <label for="playerTelegram_id">Telegram user ID</label>
-            <input type="text" id="playerTelegram_id" required placeholder="Ваш Telegram user ID">
+        <h1>Редактирование</h1>
+        <form id="tournament-form">
+            <label for="tournament_creator">ID</label>
+            <input id="tournament_creator" required placeholder="Ваш игровой ID, например: 12345678(12345).">
 
-            <label for="playerGame_id">Game ID</label>
-            <input type="text" id="playerGame_id" required placeholder="Ваш игровой ID">
+            <label for="tournament_name">Ник    </label>
+            <input type="text" id="tournament_name" required placeholder="Ваш игровой ник, например: jhon doe.">
 
-            <label for="playerNick_name">Никнейм</label>
-            <input type="text" id="playerNick_name" required placeholder="Ваш никнейм">
+            <label for="tournament_about">Telegram Username</label>
+            <input type="text" id="tournament_about" required placeholder="Ваш телеграм Username, например: @jhondoe.">
 
-            <button type="button" id="submit-button">Отправить</button>
+            <button type="button" id="submit-button">Обновить</button>
         </form>
     </div>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="script.js">
-        document.getElementById('submit-button').addEventListener('click', function() {
-            document.activeElement.blur(); // Скрываем клавиатуру
-            const form = document.getElementById('registration-form');
-            if (form.checkValidity()) {
-                alert('Данные отправлены!');
-                // Логика отправки данных на сервер
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
